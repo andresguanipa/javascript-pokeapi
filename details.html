@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Details</title>
+</head>
+
+<body onload="getPokemon()" class="details-body">
+
+    <div class="container">
+
+        <h2 id="name"></h2>
+
+        <hr />
+
+        <div class="row center">
+            <div class="col" id="frontImg"></div>
+            <div class="col" id="backImg"></div>
+            <div class="col" id="frontShinyImg"></div>
+            <div class="col" id="backShinyImg"></div>
+        </div>
+
+
+        <h5 id="pokedex"></h5> <br />
+
+        <label><b id="type-label"></b></label>
+        <div>
+            <ul id="type">
+            </ul>
+        </div>
+
+        <div id="height"></div>
+        <div id="weight"></div>
+        <br />
+
+        <label><b>Moves: </b></label>
+        <p id="moves"></p>
+
+
+        <hr />
+
+        <div class="stats">
+            <div class="row">
+                <div class="col">
+                    <label><b>PS: </b></label>
+                    <p id="ps"></p>
+                </div>
+                <div class="col">
+                    <label><b>Attack: </b></label>
+                    <p id="attack"></p>
+                </div>
+                <div class="col">
+                    <label><b>Defense: </b></label>
+                    <p id="defense"></p>
+                </div>
+                <div class="col">
+                    <label><b>Sp. Attack: </b></label>
+                    <p id="sp_attack"></p>
+                </div>
+                <div class="col">
+                    <label><b>Sp. Defense: </b></label>
+                    <p id="sp_defense"></p>
+                </div>
+                <div class="col">
+                    <label><b>Speed: </b></label>
+                    <p id="speed"></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+
+</body>
+
+</html>
