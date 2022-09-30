@@ -22,7 +22,6 @@ async function testing() {
 
     }
 
-    document.getElementById("lds-roller").style.display = "none";
 
     for (let i = 0; i < 100; i++) {
 
@@ -37,6 +36,8 @@ async function testing() {
 
     }
 
+    document.getElementById("lds-roller").style.display = "none";
+    document.getElementById('contenedor').style.display = "none";
     document.getElementById("list").innerHTML = htmlList;
 
 
@@ -65,7 +66,7 @@ async function getPokemon() {
 
     let pok = getUrlParameter();
 
-    if (pok) {
+    if (pok && pok >= 1 && pok <= 100) {
 
         pokemon = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pok}`);
 
@@ -100,7 +101,7 @@ async function getPokemon() {
 
         for (let i = 0; i < moves.length; i++) {
 
-            if(i == moves.length - 1){
+            if (i == moves.length - 1) {
                 document.getElementById("moves").innerHTML += `${firstUpper(moves[i].move.name)}.`;
             } else {
                 document.getElementById("moves").innerHTML += `${firstUpper(moves[i].move.name)}, `;
@@ -117,6 +118,10 @@ async function getPokemon() {
             document.getElementById(statsHtml[i]).innerHTML = `${stats[i].base_stat}`;
 
         }
+
+    } else {
+
+        window.location.href = "index.html";
 
     }
 
